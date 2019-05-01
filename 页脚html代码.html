@@ -1,0 +1,43 @@
+<script type="text/javascript">
+$(function(){
+    $('#blogTitle h1').addClass('bounceInLeft animated');
+    $('#blogTitle h2').addClass('bounceInRight animated');
+    // 删除反对按钮
+    $('.buryit').remove();
+    initCommentData();
+});
+function initCommentData() {
+    $('.feedbackItem').each(function() {
+        var text = $(this).find('.feedbackListSubtitle .layer').text();
+        // 将楼层信息放到data里面
+        // $(this).find('.blog_comment_body').attr('data-louceng', text.replace(/^#/g, ''));
+        if($(this).find('.feedbackListSubtitle .louzhu').length>0) $(this).addClass('myself');
+        var avatar = $(this).find('> .feedbackCon > span').html() || 'http://pic.cnitblog.com/face/sample_face.gif';
+        $(this).find('> .feedbackCon > .blog_comment_body').append('<img class="user-avatar" src="'+avatar+'"/>')
+    });
+}
+
+$(document).ajaxComplete(function(event, xhr, settings) {
+  // 监听获取评论ajax事件
+  if(settings.url.indexOf('/mvc/blog/GetComments.aspx') >= 0) {
+    initCommentData();
+  }
+});
+</script>
+
+<script src="https://files.cnblogs.com/files/hafiz/jquery-migrate-1.2.1.js"></script>
+<div id="scrollTop" style="display:none;">
+      <div class="level-2"></div>
+      <div class="level-3"></div>
+</div>
+<script src="http://files.cnblogs.com/files/hafiz/scroll2top.js"></script>
+<script type="text/javascript">
+    UI.global_search();
+    var uvOptions = {};
+    // !important
+    (function() {
+        initScrollTop();
+    })();
+</script>
+
+<script src="https://files.cnblogs.com/files/miangao/bootstrap.min.js"></script>

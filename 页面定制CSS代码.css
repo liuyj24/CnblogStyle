@@ -1,0 +1,1101 @@
+@font-face {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  src: url("http://blog.zhaishidan.cn/css/font/fontawesome-webfont.eot?#iefix") format('embedded-opentype'), url("http://blog.zhaishidan.cn/css/font/fontawesome-webfont.woff") format('woff'), url("http://blog.zhaishidan.cn/css/font/fontawesome-webfont.ttf") format('truetype'), url("http://blog.zhaishidan.cn/css/font/fontawesome-webfont.svg#FontAwesomeRegular") format('svg');
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #eee;
+  color: #444;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 14px;
+  text-shadow: 0 0 1px transparent;
+  color:#505050;
+}
+@media screen and (max-width: 1260px) {
+  body {
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 13px;
+  }
+}
+h1,h2,h3,h4,h5,h6 {font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;}
+h1 {font-size: 1.8em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.3em;}
+a {text-decoration: none;color: #795548;}
+a:hover {
+    color: #FFC107;
+}
+#home{
+    margin: 0 auto;
+    width: 85%;
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+    border-radius: 20px;
+}
+#tbCommentBody {width: 100%;}
+#blogTitle {
+    width: 22%;
+    margin-top: -10px;
+    text-align: center;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+    -o-transition: width 0.5s;
+}
+#blogTitle:hover {
+    width: 30%;
+}
+.alignright {float: right;}
+.clearfix {zoom: 1;}
+.clearfix:before,.clearfix:after {content: "";display: table;}
+.clearfix:after {clear: both;}
+#header, #main, #footer {width: 100%;margin: 0 auto;}
+@media screen and (max-width: 1260px) {
+  #main {
+    width: 95%;
+  }
+}
+#mainContent {
+  width: 75%;
+  float: left;
+  margin-left: 10px;
+}
+@media screen and (max-width: 1260px) {
+  #main-col {
+    width: 100%;
+    margin-right: -300px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #main-col {
+    margin-right: 0;
+    float: none;
+  }
+}
+@media screen and (max-width: 1260px) {
+  #wrapper {
+    margin-right: 300px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #wrapper {
+    margin-right: 0;
+  }
+}
+#header {
+  text-shadow: 0 0 1px #fff;
+  margin: 20px auto 30px;
+  position: relative;
+  height: 60px;
+  color: #999;
+}
+#header a {
+  color: #9E9E9E;
+}
+#header a:hover {
+    color: #9E9E9E;
+    text-decoration: none;
+    text-shadow: 3px 3px 3px #9E9E9E;
+}
+#header h1 {
+    font-weight: normal;
+    font-size: 3em;
+    font-weight: bold;
+}
+#header h2 {
+  font-weight: normal;
+  font-size: 0.9em;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+#header #navigator {
+  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  width: 100%;
+  font-size: 16px;
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    height: 50px;
+    line-height: 50px;
+    clear: both;
+    margin-top: 25px;
+}
+#header #navigator ul {
+  list-style: none;
+}
+#header #navigator ul li {
+    float: left;
+    width: 13%;
+    text-align: center;
+    margin-right: 0px;
+    background: #9e9e9e14;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+    -o-transition: width 0.5s;
+}
+#header #navigator ul li:hover {
+    width: 20%;
+}
+
+#header .blogStats {
+  float: right;
+  font-size: 13px;
+}
+.topicListFooter {
+  margin-top:30px;
+  margin-bottom: 30px;
+  margin-right: 0 !important;
+}
+.topicListFooter a {
+  display: inline !important;
+  padding: 10px 20px;
+  background: #ddd;
+  color: #999;
+  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-shadow: 0 0 1px #fff;
+  border-radius: 5px;
+}
+.topicListFooter a:hover {
+    background: #795548;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px #9E9E9E;
+}
+.topicListFooter .prev:before {
+  content: '\f053';
+  padding-right: 10px;
+  font-family: FontAwesome;
+}
+.topicListFooter .next:after {
+  content: '\f054';
+  padding-left: 10px;
+  font-family: FontAwesome;
+}
+article {
+  -webkit-box-shadow: 1px 2px 3px #ddd;
+  box-shadow: 1px 2px 3px #ddd;
+  background: #fff;
+}
+article.page {
+  padding-left: 20px;
+}
+article.page .icon {
+  display: none;
+}
+.postIcon:before {
+  content: '\f016';
+}
+article.photo .icon:before {
+  content: '\f030';
+}
+article.link .icon:before {
+  content: '\f0c1';
+}
+article.link .title a:after {
+  content: '\f08e';
+  color: #999;
+  font: 12px FontAwesome;
+  padding-left: 10px;
+  vertical-align: super;
+}
+/******************************************以下自定义样式***********************************************/
+#MySignature{
+border-top: 2px solid #ccc;
+    padding-top: 20px;
+}
+.pager{
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 30px;
+margin-bottom: -30px;
+}
+#blog-calendar{
+  width:0px;
+  height:0px;
+  display: none !important;
+}
+#TopViewPostsBlock ul li{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+}
+.day .dayTitle{
+      display: none !important;
+}
+//去掉广告
+#ad_t2,#opt_under_post,.c_ad_block,#under_post_news,#under_post_kb{
+    display: none !important;
+}
+.postTitle, .entrylistPosttitle {
+    font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1.8em;
+    padding: 20px 20px 15px 0px;
+    background: #fff;
+    border-radius: 10px 10px 0px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: font-size 0.5s;
+    -moz-transition: font-size 0.5s;
+    -webkit-transition: font-size 0.5s;
+    -o-transition: font-size 0.5s;
+}
+
+element.style {
+}
+.postTitle, .entrylistPosttitle {
+    font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1.8em;
+    padding: 20px 20px 15px 0px;
+    background: #fff;
+    border-radius: 10px 10px 0px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: font-size 0.5s;
+    -moz-transition: font-size 0.5s;
+    -webkit-transition: font-size 0.5s;
+    -o-transition: font-size 0.5s;
+}
+.postTitle:hover {
+    font-size: 2em;
+}
+
+ylistPostSummary, .postCon, .postBody {
+  padding: 0 20px 15px 0px;
+  -webkit-box-shadow: 1px 2px 3px #ddd;
+  box-shadow: 0 2px 0 #ddd;
+  background: #fff;
+  position: relative;
+}
+.postDesc, .entrylistItemPostDesc {
+  padding: 0px 20px 15px 0px;
+  color: #999;
+  font-size: 0.9em;
+  line-height: 16px;
+  position: relative;
+  min-height: 16px;
+  background: #fff;
+  border-bottom: 1px dashed #ccc;
+}
+#blog-calendar {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .postCon {
+    padding-left: 0px;
+  }
+}
+.postIcon {
+  height: 0px;
+  margin-right: 25px;
+  position: relative;
+  top: 25px;
+  left: 25px;
+  color: #258fb8;
+}
+@media screen and (max-width: 600px) {
+  article header .icon {
+    display: none;
+  }
+}
+.postIcon:before {
+  position: absolute;
+  font: 32px FontAwesome;
+  top: 0;
+  left: 0;
+  width: 32px;
+  text-align: center;
+}
+article header time {
+  color: #999;
+  font: 0.9em "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-bottom: 5px;
+  display: block;
+  line-height: 1;
+}
+article header .title {
+  font-weight: normal;
+}
+article header .title a {
+  color: #444;
+}
+article header .title a:hover {
+  color: #258fb8;
+  text-decoration: none;
+}
+#cnblogs_post_body {
+  text-align: justify;
+  line-height: 1.6;
+}
+#cnblogs_post_body p,
+#cnblogs_post_body blockquote,
+#cnblogs_post_body ul,
+#cnblogs_post_body ol,
+#cnblogs_post_body dl,
+#cnblogs_post_body table,
+#cnblogs_post_body iframe,
+#cnblogs_post_body h3,
+#cnblogs_post_body h4,
+#cnblogs_post_body h5,
+#cnblogs_post_body h6,
+#cnblogs_post_body .video-container {
+  margin-top: 15px;
+}
+#cnblogs_post_body blockquote {
+    font-size: 1.2em;
+    border-left: 4px solid #cbcbcb;
+    background-color: #f8f8f8;
+    color: #666;
+}
+#cnblogs_post_body blockquote footer {
+  border-top: none;
+  font-size: 0.8em;
+  line-height: 1;
+  margin: 20px 0 0;
+  padding-top: 0;
+}
+#cnblogs_post_body blockquote footer cite:before {
+  content: '—';
+  color: #ccc;
+  padding: 0 0.5em;
+}
+#cnblogs_post_body code,
+#cnblogs_post_body pre {
+  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+}
+#cnblogs_post_body code {
+  background: #fff5f5;
+  color: #333;
+  padding: 0 5px;
+  margin: 0 2px;
+  font-size: 0.9em;
+}
+#cnblogs_post_body pre {
+  background: #eee;
+  overflow: auto;
+  padding: 7px 15px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+#cnblogs_post_body pre code {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+#cnblogs_post_body ul ul,
+#cnblogs_post_body ol ul,
+#cnblogs_post_body dl ul,
+#cnblogs_post_body ul ol,
+#cnblogs_post_body ol ol,
+#cnblogs_post_body dl ol,
+#cnblogs_post_body ul dl,
+#cnblogs_post_body ol dl,
+#cnblogs_post_body dl dl {
+  margin-top: 0;
+}
+#cnblogs_post_body h1, #cnblogs_post_body h2 {
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+#cnblogs_post_body h3,
+#cnblogs_post_body h4,
+#cnblogs_post_body h5,
+#cnblogs_post_body h6 {
+  font-weight: normal;
+  background: #eee;
+    border-radius: 6px;
+    color: Red;
+    font-family: "微软雅黑" , "宋体" , "黑体" ,Arial;
+    height: 25px;
+    line-height: 25px;
+    margin: 18px 5px !important;
+    padding: 8px;
+    opacity: 0.8;
+    border: 1px dashed #aaa;
+}
+.postBody img, 
+.entrylistPostSummary img, .postCon img,
+.postBody video {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+#cnblogs_post_body iframe {
+  border: none;
+}
+#cnblogs_post_body .caption {
+  display: block;
+  margin-top: 5px;
+  color: #999;
+  position: relative;
+  font-size: 0.9em;
+  padding-left: 25px;
+}
+#cnblogs_post_body .caption:before {
+  content: '\f040';
+  position: absolute;
+  font: 1.3em FontAwesome;
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+#cnblogs_post_body .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+#cnblogs_post_body .video-container iframe,
+#cnblogs_post_body .video-container object,
+#cnblogs_post_body .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+}
+#cnblogs_post_body .pullquote {
+  float: right;
+  border: none;
+  padding: 0;
+  margin: 1em 0 0.5em 1.5em;
+  text-align: left;
+  width: 45%;
+  font-size: 1.5em;
+}
+#blog-comments-placeholder, #comment_form {
+  padding: 20px;
+  background: #fff;
+  -webkit-box-shadow: 1px 10px 10px #ddd;
+  box-shadow: 10px 10px 10px #ddd;
+  margin-bottom: 50px;
+    border: 1px solid #ccc;
+padding-top:0;
+}
+.feedback_area_title {
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+.feedbackItem {
+  border-bottom: 1px dashed #CCC;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.color_shine {background: rgb(226, 242, 255);}
+.feedbackItem:hover {-webkit-animation-name: color_shine;-webkit-animation-duration: 2s;-webkit-animation-iteration-count: infinite;}
+#comment_form .title {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+#ad_under_post_holder {
+  display: none;
+}
+.entrylistTitle {
+  color: #999;
+  font-weight: normal;
+  margin-bottom: 30px;
+  text-shadow: 0 0 1px #fff;
+}
+.entrylistTitle:before {
+  font-family: FontAwesome;
+  content: '\f07b';
+  padding-right: 15px;
+}
+.archive {
+  -webkit-box-shadow: 1px 2px 3px #ddd;
+  box-shadow: 1px 2px 3px #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 50px;
+}
+.archive article {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.archive article .post-content {
+  margin-bottom: 0;
+}
+#sideBar{
+  width: 22%;
+  line-height: 1.8em;
+  float: right;
+}
+@media screen and (max-width: 900px) {
+  #sideBar {
+    float: none;
+    width: 100%;
+  }
+}
+.catListLink, .catListMyTeams, .catListComment, .catListFeedback {
+  display: none;
+}
+.search, .newsItem, .catListPostCategory, .catListPostArchive, .catListTag, .catListView, .catListBlogRank {
+    background: #fff;
+    margin-bottom: 30px;
+    word-wrap: break-word;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 2px solid #9E9E9E;
+    transition: box-shadow 0.5s;
+    -moz-transition: box-shadow 0.5s;
+    -webkit-transition: box-shadow 0.5s;
+    -o-transition: box-shadow 0.5s;
+}
+/*添加阴影*/
+.newsItem:hover, .catListPostCategory:hover, .catListPostArchive:hover, .catListTag:hover, .catListView:hover, .catListBlogRank:hover {
+    /* border: 5px solid; */
+    box-shadow: 10px 10px 10px #9E9E9E;
+}
+
+
+#blog-sidecolumn h3, .newsItem h3 {
+  padding: 15px 20px;
+  font-size: 1em;
+  border-bottom: 1px solid #ddd;
+  font-weight: normal;
+}
+#blog-sidecolumn ul, .newsItem #blog-news {
+  font-size: 0.9em;
+  padding: 15px 20px;
+}
+#blog-sidecolumn ul,
+#blog-sidecolumn ol,
+#blog-sidecolumn dl {
+  list-style: none;
+}
+#blog-sidecolumn ul ul,
+#blog-sidecolumn ol ul,
+#blog-sidecolumn dl ul,
+#blog-sidecolumn ul ol,
+#blog-sidecolumn ol ol,
+#blog-sidecolumn dl ol,
+#blog-sidecolumn ul dl,
+#blog-sidecolumn ol dl,
+#blog-sidecolumn dl dl {
+  list-style: disc;
+  margin-left: 20px;
+}
+#q {
+  background: #fff;
+  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 1em;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #999;
+  height: 100%;
+}
+#q:focus {
+  color: #444;
+}
+/*隐藏搜索框中的无用组件*/
+.mySearch {
+  display: none;
+}
+
+#sideBar .tag small {
+  margin-left: 15px;
+  color: #999;
+}
+#sideBar .tag small:before {
+  content: '(';
+}
+#sideBar .tag small:after {
+  content: ')';
+}
+#sideBar .twitter li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 20px;
+  font-size: 0.9em;
+}
+#sideBar .twitter li:last-of-type {
+  border-bottom: none;
+}
+#sideBar .twitter small {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+  line-height: 1;
+}
+#sideBar .tagcloud .entry {
+  padding-right: 5px;
+}
+#sideBar .tagcloud a {
+  margin-right: 10px;
+  display: inline-block;
+}
+#footer {
+  color: #999;
+  margin-bottom: 50px;
+  font: 0.9em/1.6 "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-shadow: 0 0 1px #fff;
+  text-align:center;
+  margin: 30px 0px 50px;
+}
+.entry .gist {
+  background: #eee;
+  border: 1px solid #ddd;
+  margin-top: 15px;
+  padding: 7px 15px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  text-shadow: 0 0 1px #fff;
+  line-height: 1.6;
+  overflow: auto;
+  color: #666;
+}
+.entry .gist .gist-file {
+  border: none;
+  font-family: inherit;
+  margin: 0;
+  font-size: 0.9em;
+}
+.entry .gist .gist-file .gist-data {
+  background: none;
+  border-bottom: none;
+}
+.entry .gist .gist-file .gist-data pre {
+  padding: 0 !important;
+  font-family: Monaco, Menlo, Consolas, Courier New, monospace;
+}
+.entry .gist .gist-file .gist-meta {
+  background: none;
+  color: #999;
+  margin-top: 5px;
+  padding: 0;
+  text-shadow: 0 0 1px #fff;
+  font-size: 100%;
+}
+.entry .gist .gist-file .gist-meta a {
+  color: #258fb8;
+}
+.entry .gist .gist-file .gist-meta a:visited {
+  color: #258fb8;
+}
+figure.highlight {
+  background: #eee;
+  border: 1px solid #ddd;
+  margin-top: 15px;
+  padding: 7px 15px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  text-shadow: 0 0 1px #fff;
+  line-height: 1.6;
+  overflow: auto;
+  position: relative;
+  font-size: 0.9em;
+}
+figure.highlight figcaption {
+  color: #999;
+  margin-bottom: 5px;
+  text-shadow: 0 0 1px #fff;
+}
+figure.highlight figcaption a {
+  position: absolute;
+  right: 15px;
+}
+figure.highlight pre {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+figure.highlight table {
+  margin-top: 0;
+  border-spacing: 0;
+}
+figure.highlight .gutter {
+  color: #999;
+  padding: 7px 10px 7px 5px !important;
+  border-right: 1px solid #ddd;
+  text-align: right;
+}
+figure.highlight .code {
+  padding: 7px 7px 7px 10px !important;
+  border-left: 1px solid #fff;
+  color: #666;
+}
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .doctype,
+pre .pi,
+pre .lisp .string,
+pre .javadoc {
+  color: #93a1a1;
+  font-style: italic;
+}
+pre .keyword,
+pre .winutils,
+pre .method,
+pre .addition,
+pre .css .tag,
+pre .request,
+pre .status,
+pre .nginx .title {
+  color: #859900;
+}
+pre .number,
+pre .command,
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula,
+pre .regexp,
+pre .hexcolor {
+  color: #2aa198;
+}
+pre .title,
+pre .localvars,
+pre .chunk,
+pre .decorator,
+pre .built_in,
+pre .identifier,
+pre .vhdl,
+pre .literal,
+pre .id {
+  color: #268bd2;
+}
+pre .attribute,
+pre .variable,
+pre .lisp .body,
+pre .smalltalk .number,
+pre .constant,
+pre .class .title,
+pre .parent,
+pre .haskell .type {
+  color: #b58900;
+}
+pre .preprocessor,
+pre .preprocessor .keyword,
+pre .shebang,
+pre .symbol,
+pre .symbol .string,
+pre .diff .change,
+pre .special,
+pre .attr_selector,
+pre .important,
+pre .subst,
+pre .cdata,
+pre .clojure .title {
+  color: #cb4b16;
+}
+pre .deletion {
+  color: #dc322f;
+}
+.feedbackListSubtitle { position: relative;}
+.feedbackManage {width: 160px;position: absolute;right: 0;text-align: right;}
+.cnblogs_code_toolbar {display: none;}
+#cnblogs_post_body {overflow: hidden;}
+#cnblogs_post_body ol { padding-left: 40px;}
+#cnblogs_post_body ul { margin-left: 35px;}
+.fixedReadRank { position: fixed; top: 20px; width: 270px; }
+.fixedRecRank { position: fixed; top: 360px; width: 270px; }
+figure.highlight { margin-top: 0; padding: 0;}
+figure table {width: 100%; margin: 0 !important;}
+#cnblogs_post_body pre { padding: 0; }
+#cnblogs_post_body th, #cnblogs_post_body td { padding: 0; }
+.cnblogs_code pre { padding: 7px 15px !important; background: #f5f5f5;border: 0;margin-top: 0;}
+.cnblogs_code th {padding: 3px;}
+.cnblogs_code { padding: 0;}
+/*评论标题*/
+.feedback_area_title {
+    padding:10px;
+    font-size:24px;
+    font-weight:bold;
+    color:#aaa;
+    border-bottom:1px dashed #ccc;
+}
+.feedbackListSubtitle {
+    font-size:12px;
+    color:#888;
+}
+.feedbackListSubtitle a {
+    color:#888;
+}
+.comment_quote {
+    background:#eee;
+    padding:15px;
+    border:1px dashed #aaa;
+　　 border-radius:5px;
+}#commentform_title {
+    color:#aaa;
+    background-image:none;
+    background-repeat:no-repeat;
+    margin-bottom:10px;
+    padding:10px 20px 10px 10px;
+    font-size:24px;
+    font-weight:bold;
+    border-bottom:1px dashed #ccc;
+}
+/*评论框*/
+#comment_form {
+    margin:10px 0;
+    padding:25px;
+    border-radius: 10px;
+}
+.commentform {
+    margin:10px 0;
+    padding:10px 20px;
+    background:#fff;
+}
+/*评论输入域*/
+#tbCommentBody {
+    font-family:'MIcrosoft Yahei';
+    margin-top:10px;
+    background:white;
+    color:#333;
+    border:2px solid #fff;
+    box-shadow:inset 0 0 8px #aaa;
+    height:120px;
+    font-size:14px;
+    min-height:120px;
+    border-radius: 10px;
+}
+/*评论条目*/
+.feedbackItem {
+    font-size:14px;
+    line-height:24px;
+    margin:10px 0;
+    padding:20px;
+}
+.feedbackListSubtitle {
+    font-weight:normal;
+}
+
+/*green_channel*/
+#green_channel {
+    text:align:right;
+    padding-left:0px;
+    font-weight:normal;
+    font-size:13px;
+    width:100%;
+    border:1px dashed #ccc;
+    color:#fff;
+    border-radius:4px;
+    margin:5px auto;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+  #main{padding:0px !important;}
+  #mainContent{width: 96%;float: left;margin: 0px 2%;}
+  #sideBar {display: none;}
+  #blogTitle {width: 100%;float:none;margin: 20px auto 0 !important;}
+  #header{height:auto !important;margin: 20px auto 5px;}
+  #header #navigator{width: 100%;text-align: center;float:none;}
+  #header #navigator ul{width: 100%;margin-left: 6%;}
+  #header #navigator ul li {float: left;width: 25%;text-align: center;margin-right:0px;}
+  .postTitle, .entrylistPosttitle{font-size:14px;padding: 20px 20px 15px 0px;}
+  .postDesc, .entrylistItemPostDesc{padding: 0px 20px 15px 0px;}
+  #green_channel{padding:0px !important;}
+  #blog_stats{display: none;}
+}
+#blog-news label{box-shadow:5px 5px 5px #cccccc;text-shadow:5px 5px 5px #cccccc;border-radius:5px;}
+#div_digg{
+  padding: 5px;
+  border-radius: 5px;
+  position: fixed;
+  right: 100px;
+  bottom: 80px;
+  width:80px;
+  z-index:100;
+}
+.diggit {
+    background: url(https://www.cnblogs.com/images/cnblogs_com/tanshaoshenghao/1426602/o_tempZan.png) no-repeat;
+    width: 60px;
+    height: 60px;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.diggit:hover {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+
+#div_digg .diggnum{
+  position: absolute;
+  bottom: -20px;
+  left: 6px;
+  background: #D0D0D0;
+  padding: 2px 0;
+  display: block;
+  color: #555;
+  font-size: 12px;
+  text-align: center;
+  width: 60px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  font-weight: bold;
+}
+/* 删除反对按钮,有点邪恶了 */
+.buryit{
+  display: none;
+}
+div.commentform textarea.comment_textarea{
+  padding:10px;
+}
+#tbCommentBody{
+　　98%;
+}
+/*scroll to top*/
+#scrollTop div{
+    left:0;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    width:149px;
+    margin:0;
+    padding:0
+}
+#scrollTop .level-2{
+    background:url(http://images2015.cnblogs.com/blog/894443/201707/894443-20170716165243785-2122236756.png) no-repeat scroll -149px 0 transparent;
+    display:none;
+    height:250px;
+    opacity:0;
+    z-index:1
+}
+#scrollTop .level-3{
+    background:none repeat scroll 0 0 transparent;
+    cursor:pointer;
+    display:block;
+    height:150px;
+    z-index:2
+}
+#scrollTop{
+ background:url(http://images2015.cnblogs.com/blog/894443/201707/894443-20170716165243785-2122236756.png) no-repeat scroll 0 0 transparent;
+    cursor:default;
+    display:block;
+    height:250px;
+    overflow:hidden;
+    position:fixed;
+    right:0;
+    top:80%;
+    width:149px;
+    z-index:11;
+    margin:-125px 0 0;
+    padding:0
+}
+/*评论带头像，且支持旋转*/
+.feedbackCon img:hover {
+-webkit-transform: rotateZ(360deg);
+-moz-transform: rotateZ(360deg);
+-ms-transform: rotateZ(360deg);
+-o-transform: rotateZ(360deg);
+transform: rotateZ(360deg);
+}
+ 
+.feedbackCon img {
+border-radius: 40px;
+-webkit-transition: all 0.6s ease-out;
+-moz-transition: all 0.5s ease-out;
+-ms-transition: all 0.5s ease-out;
+-o-transition: all 0.5s ease-out;
+transition: all 0.5s ease-out;
+}
+
+/*scroll to top 火箭升天代码 */
+#scrollTop div{
+  left:0;
+  overflow:hidden;
+  position:absolute;
+  top:0;
+  width:149px;
+  margin:0;
+  padding:0
+}
+#scrollTop .level-2{
+  background:url(http://images2015.cnblogs.com/blog/894443/201707/894443-20170716165243785-2122236756.png) no-repeat scroll -149px 0 transparent;
+  display:none;
+  height:250px;
+  opacity:0;
+  z-index:1
+}
+#scrollTop .level-3{
+  background:none repeat scroll 0 0 transparent;
+  cursor:pointer;
+  display:block;
+  height:150px;
+  z-index:2
+}
+#scrollTop{
+  background:url(http://images2015.cnblogs.com/blog/894443/201707/894443-20170716165243785-2122236756.png) no-repeat scroll 0 0 transparent;
+  cursor:default;
+  display:block;
+  height:180px;
+  overflow:hidden;
+  position:fixed;
+  right:0;
+  top:90%;
+  width:149px;
+  z-index:11;
+  margin:-125px 0 0;
+  padding:0
+}
+
+/*目录样式*/
+#sideCatalog a{
+  font-size:12px;
+  font-weight:normal !important;
+}
+
+/*隐藏文章数量*/
+span#stats_article_count {
+    display: none;
+}
+/*代码样式*/
+.cnblogs-markdown code, .cnblogs-post-body code {
+    font-family: "Courier New",sans-serif!important;
+    font-size: 12px!important;
+    line-height: 20px;
+    background-color: #f5f5f5!important;
+    border: 0px solid #ccc!important;
+    padding: 0 5px!important;
+    border-radius: 3px!important;
+    line-height: 1.8;
+    margin: 1px 5px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+/*修改markdown中h3~h6标题的样式, 除去边框, 字体改为黑色*/
+#cnblogs_post_body h3, #cnblogs_post_body h4, #cnblogs_post_body h5, #cnblogs_post_body h6 {
+    font-weight: normal;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+    line-height: 25px;
+    margin: 18px 5px !important;
+    padding: 8px;
+    opacity: 0.8;
+    border: 0px dashed #aaa;
+}
