@@ -70,7 +70,7 @@ a:hover {
 #mainContent {
   width: 75%;
   float: left;
-  margin-left: 10px;
+  margin-left: 3px;
 }
 @media screen and (max-width: 1260px) {
   #main-col {
@@ -341,7 +341,7 @@ article header .title a:hover {
 }
 #cnblogs_post_body {
   text-align: justify;
-  line-height: 1.6;
+  line-height: 2;
 }
 #cnblogs_post_body p,
 #cnblogs_post_body blockquote,
@@ -483,8 +483,9 @@ article header .title a:hover {
   width: 45%;
   font-size: 1.5em;
 }
+/*padding修改为5px, 让评论区宽点, 方便在移动端显示*/
 #blog-comments-placeholder, #comment_form {
-  padding: 20px;
+  padding: 5px;
   background: #fff;
   -webkit-box-shadow: 1px 10px 10px #ddd;
   box-shadow: 10px 10px 10px #ddd;
@@ -1098,4 +1099,33 @@ span#stats_article_count {
     padding: 8px;
     opacity: 0.8;
     border: 0px dashed #aaa;
+}
+/*调整了文字的行高*/
+.c_b_p_desc {
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    line-height: 2;
+}
+
+/*调整了文章内超链接的显示样式*/
+#cnblogs_post_body a {
+    color: #009688;
+    font-weight: bold;
+}
+
+#cnblogs_post_body a:hover {
+    color: #FF9800;
+}
+
+/*取消markdown格式中引用框的边线*/
+blockquote {
+    background: none;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
