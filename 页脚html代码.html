@@ -18,7 +18,7 @@ function initCommentData() {
 }
 $(document).ajaxComplete(function(event, xhr, settings) {
   // 监听获取评论ajax事件
-  if(settings.url.indexOf('/mvc/blog/GetComments.aspx') >= 0) {
+  if(settings.url.indexOf('/ajax/GetComments.aspx') >= 0) {
     initCommentData();
   }
 });
